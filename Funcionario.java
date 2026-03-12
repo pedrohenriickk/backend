@@ -1,37 +1,39 @@
-package gettersEsetters;
+public abstract class Funcionario {
 
-import java.time.LocalDate;
-
-public class Funcionario {
     private String nome;
-    private String setor;
-    private String cargo;
-    private LocalDate nasc;
     private double salario;
+    private String rg;
 
-    public String getNome(){
-     return nome;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
-
     }
-    public double getSalario(){
+
+    public double getSalario() {
         return salario;
     }
 
-    public void setSalario(double salario){
+
+        public abstract double calcularSalario(double valor);
+
+
+    public String getRG() {
+        return rg;
+    }
+
+    public void setRG(String RG) {
+        this.rg = rg;
+    }
+
+    public Funcionario() {
+    }
+
+    public Funcionario(String nome, double salario, String RG) {
+        this.nome = nome;
         this.salario = salario;
-        this.salario = salario - 150;
-
-    }
-    public String getCargo(){
-        return cargo;
-    }
-
-    public void setCargo(String cargo){
-        this.cargo = cargo;
-
+        this.rg = rg;
     }
 }

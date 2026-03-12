@@ -1,15 +1,7 @@
-package gettersEsetters;
+void main() {
+    Farmaceutico farmaceutico = new Farmaceutico();
+    System.out.println(farmaceutico.calcularSalario(7000));
 
-public class Main {
-    static void main(){
-        Funcionario funcionario = new Funcionario();
-
-        funcionario.setNome("João");
-        IO.println(funcionario.getNome());
-        funcionario.setSalario(850);
-        IO.println(funcionario.getSalario());
-        funcionario.setCargo("Analista de Dados");
-        IO.println(funcionario.getCargo());
-        
-    }
+    Engenheiro engenheiro = new Engenheiro();
+    System.out.println(engenheiro.calcularSalario(7000));
 }
